@@ -1,5 +1,4 @@
 import logo from "@/assests/Logo/assestment-logo.png";
-
 import Image from "next/image";
 import Link from "next/link";
 import { CiSearch } from "react-icons/ci";
@@ -60,8 +59,8 @@ const Header = () => {
 						</button>
 
 						<Avatar>
-							<AvatarImage src="https://img.freepik.com/premium-photo/web-developer-digital-avatar-generative-ai_934475-9048.jpg" />
-							<AvatarFallback>CN</AvatarFallback>
+							<AvatarImage src="https://i.ibb.co/SsTzDc9/Ellipse-16.png" />
+							<AvatarFallback>AS</AvatarFallback>
 						</Avatar>
 					</div>
 				</div>

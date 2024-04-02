@@ -9,6 +9,7 @@ import paymentIcon from "@/assests/icon/payment.png";
 import onlineCourseIcon from "@/assests/icon/running.png";
 import settingIcon from "@/assests/icon/settings.png";
 import profileIcon from "@/assests/icon/user.png";
+import profileImg from "@/assests/Images/Ellipse 16.png";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -79,14 +80,16 @@ const SideBar = () => {
 	return (
 		<div className=" min-w-60  bg-[#fefefe] rounded-3xl shadow-xl ">
 			{/* Profile Image  */}
-			<div className="">
-				<Image
-					className="rounded-full mx-auto mt-8 bg-[#dfc19c] p-2"
-					src="https://img.freepik.com/premium-photo/web-developer-digital-avatar-generative-ai_934475-9048.jpg"
-					alt=""
-					width={200}
-					height={200}
-				/>
+			<div className="rounded-full w-44 p-[4px] mx-auto bg-yellow-500 shadow-2xl hover:shadow-blue-950  mt-6">
+				<div className="rounded-full shadow-xl w-40 mx-auto bg-slate-300 p-[4px]">
+					<Image
+						className="rounded-full mx-auto  bg-[#edeae7] p-[3px]"
+						src={profileImg}
+						alt=""
+						width={200}
+						height={200}
+					/>
+				</div>
 			</div>
 
 			{/* Assessment info  */}
@@ -106,7 +109,7 @@ const SideBar = () => {
 								className={`${
 									pathName === item.path
 										? " flex text-white  bg-[#191661] p-3 w-full items-center gap-3 px-4"
-										: "flex bg-slate-200   hover:bg-[#191661] p-3 w-full items-center gap-3 px-4"
+										: "flex bg-[#eaeafb]   hover:bg-[#191661] p-3 w-full items-center gap-3 px-4"
 								}`}
 							>
 								<Image
@@ -133,7 +136,7 @@ const SideBar = () => {
 								className={`${
 									pathName === item.path
 										? " flex text-white  bg-[#191661] p-3 w-full items-center gap-3 px-4"
-										: "flex bg-slate-200   hover:bg-[#191661] p-3 w-full items-center gap-3 px-4"
+										: "flex bg-[#eaeafb]  hover:bg-[#191661] p-3 w-full items-center gap-3 px-4"
 								}`}
 							>
 								<Image
