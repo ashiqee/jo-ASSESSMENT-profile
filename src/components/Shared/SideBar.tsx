@@ -1,3 +1,4 @@
+"use client";
 import bellIcon from "@/assests/icon/bell.png";
 import videos from "@/assests/icon/cloud-computing.png";
 import karateIcon from "@/assests/icon/education.png";
@@ -10,8 +11,11 @@ import settingIcon from "@/assests/icon/settings.png";
 import profileIcon from "@/assests/icon/user.png";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const SideBar = () => {
+	const pathName = usePathname();
+
 	const courseMenu = [
 		{
 			menuLabel: "Karate Course",
@@ -53,7 +57,7 @@ const SideBar = () => {
 		{
 			menuLabel: "My Profile",
 			menuIcon: profileIcon,
-			path: "/my-profile",
+			path: "/profile",
 		},
 		{
 			menuLabel: "Payment Method",
@@ -73,7 +77,7 @@ const SideBar = () => {
 	];
 
 	return (
-		<div className=" w-60 min-h-screen bg-[#fefefe] rounded-3xl shadow-xl ">
+		<div className=" min-w-60  bg-[#fefefe] rounded-3xl shadow-xl ">
 			{/* Profile Image  */}
 			<div className="">
 				<Image
@@ -97,9 +101,25 @@ const SideBar = () => {
 				{/* course menu  */}
 				<ul className="flex flex-col gap-1 mt-2">
 					{courseMenu.map((item, i) => (
-						<Link className="" key={i} href={item.path}>
-							<li className="flex bg-slate-200 p-3 w-full items-center gap-3 px-4">
-								<Image src={item.menuIcon} alt="" width={16} />
+						<Link className="hover:text-white" key={i} href={item.path}>
+							<li
+								className={`${
+									pathName === item.path
+										? " flex text-white  bg-[#191661] p-3 w-full items-center gap-3 px-4"
+										: "flex bg-slate-200   hover:bg-[#191661] p-3 w-full items-center gap-3 px-4"
+								}`}
+							>
+								<Image
+									className={`${
+										pathName === item.path
+											? "filter-invert"
+											: "hover:filter-invert"
+									} `}
+									src={item.menuIcon}
+									alt=""
+									width={16}
+								/>
+
 								<h4 className="text-sm font-light">{item.menuLabel}</h4>
 							</li>
 						</Link>
@@ -108,9 +128,25 @@ const SideBar = () => {
 				{/* Profile menu  */}
 				<ul className="flex flex-col gap-1 my-6">
 					{profileMenu.map((item, i) => (
-						<Link className="" key={i} href={item.path}>
-							<li className="flex bg-slate-200 p-3 w-full items-center gap-3 px-4">
-								<Image src={item.menuIcon} alt="" width={16} />
+						<Link className="hover:text-white" key={i} href={item.path}>
+							<li
+								className={`${
+									pathName === item.path
+										? " flex text-white  bg-[#191661] p-3 w-full items-center gap-3 px-4"
+										: "flex bg-slate-200   hover:bg-[#191661] p-3 w-full items-center gap-3 px-4"
+								}`}
+							>
+								<Image
+									className={`${
+										pathName === item.path
+											? "filter-invert"
+											: "hover:filter-invert"
+									} `}
+									src={item.menuIcon}
+									alt=""
+									width={16}
+								/>
+
 								<h4 className="text-sm font-light">{item.menuLabel}</h4>
 							</li>
 						</Link>
