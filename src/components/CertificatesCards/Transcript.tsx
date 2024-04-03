@@ -43,8 +43,8 @@ export default function Transcripts() {
 							onClick={() => setActiveTranscript(data.id)}
 							className={
 								activeTranscript === data.id
-									? "md:max-h-60 hover:bg-[#eaeafb] text-blue-950 rounded-3xl"
-									: "md:max-h-60 bg-[#eaeafb] text-blue-950 rounded-3xl"
+									? "md:max-h-60  text-blue-950 rounded-3xl"
+									: "md:max-h-60 hover:bg-[#ffffff] bg-[#eaeafb] text-blue-950 rounded-3xl"
 							}
 							key={data.id}
 						>
