@@ -33,7 +33,7 @@ const Header = () => {
 	];
 	return (
 		<header className="bg-[#26235B] pt-2 ">
-			<nav className="container mx-auto">
+			<nav className="container 2xl:max-w-[90vw] mx-auto">
 				{/* Desktop Menu  */}
 
 				<div className="flex items-center  justify-between">

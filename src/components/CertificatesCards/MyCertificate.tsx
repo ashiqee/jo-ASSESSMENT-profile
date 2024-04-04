@@ -12,6 +12,7 @@ import certificateYellowImage from "@/assests/Images/yellow.png";
 import certificationSVG from "@/assests/icon/Group 161.png";
 import { useState } from "react";
 import { AiOutlineDownload } from "react-icons/ai";
+import { BiFullscreen } from "react-icons/bi";
 import { BsShare } from "react-icons/bs";
 
 export default function MyCertificates() {
@@ -80,7 +81,10 @@ export default function MyCertificates() {
 				</div>
 				{/* certificate views  */}
 				<Card className="rounded-3xl mt-10 md:mt-0">
-					<CardContent>
+					<CardContent className="relative right-0">
+						<div className="absolute right-0 text-2xl p-5">
+							<BiFullscreen />
+						</div>
 						{activeCetificate === 1 ? (
 							<Image
 								className="p-2 px-6"

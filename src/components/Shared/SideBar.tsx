@@ -1,4 +1,7 @@
 "use client";
+import profileImg from "@/assests/Images/Ellipse 16.png";
+import cerIcon from "@/assests/Logo/SVG/c.svg";
+import ybIcon from "@/assests/icon/Group 162.png";
 import bellIcon from "@/assests/icon/bell.png";
 import videos from "@/assests/icon/cloud-computing.png";
 import karateIcon from "@/assests/icon/education.png";
@@ -9,7 +12,6 @@ import paymentIcon from "@/assests/icon/payment.png";
 import onlineCourseIcon from "@/assests/icon/running.png";
 import settingIcon from "@/assests/icon/settings.png";
 import profileIcon from "@/assests/icon/user.png";
-import profileImg from "@/assests/Images/Ellipse 16.png";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -89,6 +91,22 @@ const SideBar = () => {
 						width={200}
 						height={200}
 					/>
+					<div className="relative -top-10">
+						<Image
+							className="absolute right-0"
+							src={ybIcon}
+							alt=""
+							width={33}
+							height={33}
+						/>
+						<Image
+							className="absolute left-0"
+							src={cerIcon}
+							alt=""
+							width={33}
+							height={33}
+						/>
+					</div>
 				</div>
 			</div>
 
